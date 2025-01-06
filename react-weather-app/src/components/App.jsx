@@ -25,11 +25,12 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchWeather();
+    setCity("");
   }
 
   return (
     <>
-      <div>
+      <div className='container'>
         <h1>React Weather App</h1>
         <form onSubmit={handleSubmit}>
           <input type="text" 
