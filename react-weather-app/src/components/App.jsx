@@ -8,8 +8,7 @@ function App() {
   const [ weather, setWeather ] = useState(null);
 
   const fetchWeather = async () => {
-    // eslint-disable-next-line no-undef
-    const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     
     axios.get(url)
