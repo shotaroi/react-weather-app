@@ -8,11 +8,13 @@ function App() {
   const [ weather, setWeather ] = useState(null);
 
   const fetchWeather = async () => {
-    const apiKey = "";
+    // eslint-disable-next-line no-undef
+    const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     
     axios.get(url)
       .then(response => {
+        console.log(response.data);
         setWeather(response.data);
       })
       .catch(error => {
@@ -37,7 +39,7 @@ function App() {
             onChange={(e) => {setCity(e.target.value)}}/>
           <button type='submit'>Get Weather</button>
         </form>
-        <Weather />
+        <Weather weather={weather}/>
       </div>
     </>
   )
