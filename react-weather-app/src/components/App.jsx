@@ -1,12 +1,17 @@
 import { useState } from 'react'
 import '../index.css'
+import Weather from './Weather';
 
 function App() {
   const [ city, setCity ] = useState("");
 
+  const fetchWeather = async () => {
+
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(city);
+    fetchWeather();
   }
 
   return (
@@ -20,6 +25,7 @@ function App() {
             onChange={(e) => {setCity(e.target.value)}}/>
           <button type='submit'>Get Weather</button>
         </form>
+        <Weather />
       </div>
     </>
   )
