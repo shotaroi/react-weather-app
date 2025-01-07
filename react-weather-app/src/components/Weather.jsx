@@ -13,7 +13,6 @@ function Weather({ weather }) {
                 <p>Humidity: {weather.main.humidity}</p>
             </>}
         </div>
-
     );
 }
 
