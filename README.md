@@ -2,7 +2,7 @@
 
 This is a Weather app with React.
 
-![main](./react-weather-app/src/assets/main.png)
+<img src="./react-weather-app/src/assets/main.png" width="300px">
 
 ## Features
 Getting the weather information of the city user have chosen.
